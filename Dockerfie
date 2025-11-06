@@ -2,7 +2,7 @@ FROM docker.io/library/eclipse-temurin:25-jdk
 
 WORKDIR /opt
 
-COPY spring-petclinic.jar /opt/
+COPY target/spring-petclinic*.jar /opt/
 
 EXPOSE 8080
 
