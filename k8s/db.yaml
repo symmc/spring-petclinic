@@ -3,7 +3,7 @@ apiVersion: v1
 kind: Secret
 metadata:
   name: demo-db
-  namespace: ${GIT_BRANCH}
+  namespace: prod-1
 type: servicebinding.io/postgresql
 stringData:
   type: "postgresql"
@@ -19,7 +19,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: demo-db
-  namespace: ${GIT_BRANCH}
+  namespace: prod-1
 spec:
   ports:
     - port: 5432
@@ -31,7 +31,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: demo-db
-  namespace: ${GIT_BRANCH}
+  namespace: prod-1
   labels:
     app: demo-db
 spec:
