@@ -30,7 +30,7 @@ spec:
     spec:
       containers:
         - name: spring-petclinic
-          image: docker.io/seymaca/spring-petclinic:10
+          image: docker.io/seymaca/spring-petclinic:11
           env:
             - name: SPRING_PROFILES_ACTIVE
               value: postgres
